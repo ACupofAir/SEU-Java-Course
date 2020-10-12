@@ -1,4 +1,6 @@
+//package chapter1;
 import java.util.Scanner;
+
 public class Person {
     public String name;
     public int age;
@@ -13,7 +15,8 @@ public class Person {
     }
 
     public static void main(String args[]) {
-        Person wj = new Person("hh", 18);
-        wj.greet();
+      Scanner sc = new Scanner(System.in);
+      Person wj = new Person(sc.next(),18);
+      wj.greet();
     }
 }

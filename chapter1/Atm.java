@@ -1,4 +1,6 @@
+//package bank;
 import java.util.Scanner;
+
 public class Atm {
   private Scanner sc;
   private String user_name;
