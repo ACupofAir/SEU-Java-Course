@@ -1,11 +1,11 @@
 package chapter1;
-                   
-import java.util.Scanner;
-                        
-public class Person {   
-  public String name;   
-  public int age;       
-                        
+                           
+import java.util.Scanner;  
+                           
+public class Person {      
+  public String name;      
+  public int age;          
+                           
   Person(String name, int age) {
     this.name = name;       
     this.age = age;         
