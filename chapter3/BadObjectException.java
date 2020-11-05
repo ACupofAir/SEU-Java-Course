@@ -1,7 +1,8 @@
 package chapter3;
                           
 public class BadObjectException extends Exception{
-  private Object badObject;                       
+  Object badObject;                       
+
                                                   
   public BadObjectException(Object object, String msg) {
     super(msg);                                   
