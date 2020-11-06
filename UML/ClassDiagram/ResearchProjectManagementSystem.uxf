@@ -1,0 +1,23 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>60</x><y>168</y><w>210</w><h>80</h></coordinates><panel_attributes>Experts
+--
+-name: string
+--
+appraisalProject(projectName:string): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>168</y><w>210</w><h>110</h></coordinates><panel_attributes>Projects
+--
+-name: string
+-assessmentLevel: int
+-bidInstitute: string
+--
+applicate()
+verify() </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>167</y><w>210</w><h>110</h></coordinates><panel_attributes>BidInstitute
+--
+-name: string
+-project: string
+--
+register()
+verify()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>200</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+{appraisal}</panel_attributes><additional_attributes>10;18;110;18</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>210</y><w>110</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;18;90;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>320</x><y>70</y><w>130</w><h>70</h></coordinates><panel_attributes>ResearchProject
+ManagementSystem
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element></diagram>
