@@ -4,7 +4,7 @@ import java.io.*;
                                                    
 public class File_one {                            
                                                    
-  public  static void main(String[] args) {        
+  public  static void main(String[] args) {              
                                                          
     // File file = new File("c:/Windows/explorer.exe");  
     // File file = new File("c:/Windows","explorer.exe");
