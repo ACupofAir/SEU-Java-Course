@@ -1,5 +1,0 @@
-@startuml 
-
-Class01 <|-- Class02
-                     
-@enduml              

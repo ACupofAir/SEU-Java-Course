@@ -1,0 +1,29 @@
+@startuml  LibraryManageSystem
+                                                 
+note "LibraryManageSystem" as N1
+class Librarians {                                
+  -String name                                    
+}                                                 
+                                                  
+class Borrowers {                                 
+  -String name                                    
+  -int id                                         
+                                                  
+  +void reserve_book()                            
+  +void borrow_book()                             
+  +void return_book()                             
+                                                  
+}                                                 
+                                                  
+class Students extends Borrowers {                
+  -String instutue                                
+  -int grade                                      
+}                                                 
+                                                  
+class Teachers extends Borrowers {                
+  -String institute                               
+}                                                 
+                                                  
+Librarians --> Borrowers : manages                
+                                                  
+@enduml                                           

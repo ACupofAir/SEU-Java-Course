@@ -1,0 +1,30 @@
+@startuml  ResearchProjectManageSystem
+               
+class Experts{     
+  -String name     
+  +void appraisalProject(String projectName)
+}                                          
+                                    
+class Projects {                     
+  -String name                       
+  -int assessmentLevel               
+  -String bidInstitute               
+                                     
+  +void applicate()                  
+  +void verify()                     
+}                                    
+                                     
+class BidInstitute {                 
+  -String name                                
+  -String project                             
+                                              
+  +void verify()                              
+  +void register()                            
+}                                             
+                                              
+Experts --> Projects : appraisal              
+Projects -- BidInstitute                      
+                                              
+note "REsearchProject\n ManagementSystem" as N1
+                                              
+@enduml                                       

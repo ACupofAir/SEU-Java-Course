@@ -1,0 +1,27 @@
+@startuml  HumanResourceManagementSystem
+                     
+note "HumanResourceManageSystem" as N1
+PersonnelDepartment --> Employee : manages
+PersonnelDepartment --> FinancialDepartment : help
+                                                    
+class Employee {                                    
+  -String name                                      
+  -int gender                                       
+  -int birthDate                                    
+  -int degree                                       
+  -int jobPosition                                  
+  ...                                               
+}                                                   
+                                                    
+class PersonnelDepartment {                         
+  -String name                                      
+  +void setSalary(String employeeName, int money)   
+  +void changePosition(String employeeName)         
+  +void recordRewaedPunishment(String employeeName) 
+}                                                   
+                                                    
+class FinancialDepartment {                         
+}                                                   
+                                                    
+                                                    
+@enduml                                             
