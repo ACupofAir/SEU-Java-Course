@@ -1,0 +1,29 @@
+@startuml LibraryManagementSystem
+|Librarian|             
+start                                            
+fork                                             
+:Recieve Newbook;                                
+:Login System;                                   
+if (BookisExisted?) then (yes)                       
+:Register and Record it;                         
+detach                                           
+endif                                            
+fork again                                       
+:Recieve CampusCard;                             
+if (Has Overdue Book?) then (no)          
+else if (has Non-payment Fines) then (no) 
+|Borrower|           
+:Return OverDue Books;        
+else if (Exceeds Maxloan Amount) then (no)     
+|Borrower|                    
+:Pay Fines;                   
+else (yes)                                      
+|Librarian|                   
+:Refuse Borrowing Books;                                   
+detach                            
+endif                             
+|Librarian|                   
+:Scan Barcode and Borrow Books;                    
+endfork
+end
+@enduml                                          
