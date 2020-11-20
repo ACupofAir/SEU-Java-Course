@@ -8,11 +8,21 @@ public class BenchmarkImpl extends Benchmark{
     System.out.println(Arrays.toString(this.unsortedArray));
   }                                                      
                                                          
+  
+  /** 
+   * @param myArray
+   * @param i
+   * @param j
+   */
   public void swap(int[] myArray, int i, int j) {                      
     int temp = myArray[i];                                             
     myArray[i] = myArray[j];                                           
     myArray[j] = temp;                                                 
   }                                                                    
+  
+  /** 
+   * @param myArray
+   */
   public void mySort(int[] myArray) {                                  
     for(int i = 0; i < myArray.length; i++) {                          
       for(int j = 0; j <myArray.length-i-1; j++) {                       
@@ -28,6 +38,10 @@ public class BenchmarkImpl extends Benchmark{
     this.printArray();                                                 
   }                                                                    
                                                                        
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {                             
     BenchmarkImpl a = new BenchmarkImpl();                             
     a.printArray();                                                    

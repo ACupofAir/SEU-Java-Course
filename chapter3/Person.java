@@ -8,6 +8,10 @@ public class Person implements Cloneable{
     this.age = age;                                          
   }                                                          
                                                              
+                                                      
+  /**                                                 
+   * @return Object                                   
+   */                                                 
   public Object clone() {                             
     try {                                             
       return (Person)super.clone();                   
@@ -17,6 +21,10 @@ public class Person implements Cloneable{
     }                                                 
   }                                                   
                                                       
+                                                      
+  /**                                                 
+   * @return int                                      
+   */                                                 
   public int hashCode(){                              
     return this.name.hashCode() + age.name.hashCode();
   }                                                   

@@ -9,6 +9,10 @@ public class BadObjectException extends Exception{
     this.badObject = object;                      
   }                                               
                                                   
+  
+  /** 
+   * @return Object
+   */
   public Object getBadObject() {                  
     return this.badObject;                        
   }                                               

@@ -6,10 +6,18 @@ public class TwoDPointer {
   public Scanner sc;        
   public int x, y;                 
                                      
+  
+  /** 
+   * @return double
+   */
   public double distance() {         
     return Math.sqrt(x*x+y*y);       
   }                                  
                                      
+  
+  /** 
+   * @return int
+   */
   public int projection() {          
     return x*y;                      
   }                                  

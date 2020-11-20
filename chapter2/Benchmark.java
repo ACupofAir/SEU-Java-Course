@@ -12,8 +12,16 @@ public abstract class Benchmark {
     }                                          
   }                                                   
                                                       
+     
+  /** 
+   * @param repeat(
+   */
   abstract void benchmark();                          
                                                       
+     
+  /** 
+   * @return long
+   */
   public final long repeat() {                        
     long start = System.nanoTime();                   
     for(int i = 0; i < COUNT; i++) {                  

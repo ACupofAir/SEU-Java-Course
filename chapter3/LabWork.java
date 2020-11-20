@@ -1,12 +1,16 @@
 package chapter3;
  
 public class LabWork {
+  
+  /**                                    
+   * @param args                         
+   */                                    
   public static void main(String[] args) {
-    Person p1 = new Person("Tom", 18);
-    Person p2 = new Person("Tom", 18);
-    Person p3 = new Person("Jack", 18);
-    Person p4 = p1;   
-    Person p5 = null; 
+    Person p1 = new Person("Tom", 18);   
+    Person p2 = new Person("Tom", 18);   
+    Person p3 = new Person("Jack", 18);  
+    Person p4 = p1;                      
+    Person p5 = null;                    
                                          
     try {                                
       p5 = (Person) p1.clone();          

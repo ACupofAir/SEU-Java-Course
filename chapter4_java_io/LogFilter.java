@@ -10,6 +10,12 @@ public class LogFilter implements FilenameFilter {
     pattern = Pattern.compile(regex);                           
   }                                                             
                                                                 
+  
+  /** 
+   * @param dir
+   * @param name
+   * @return boolean
+   */
   public boolean accept(File dir, String name) {                
     return pattern.matcher(new File(name).getName()).matches();                  
   }                                                             

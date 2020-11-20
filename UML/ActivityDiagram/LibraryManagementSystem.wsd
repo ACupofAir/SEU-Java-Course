@@ -12,18 +12,18 @@ fork again
 :Recieve CampusCard;                             
 if (Has Overdue Book?) then (no)          
 else if (has Non-payment Fines) then (no) 
-|Borrower|           
-:Return OverDue Books;        
+|Borrower|                                
+:Return OverDue Books;                    
 else if (Exceeds Maxloan Amount) then (no)     
-|Borrower|                    
-:Pay Fines;                   
-else (yes)                                      
-|Librarian|                   
+|Borrower|                                
+:Pay Fines;                                      
+else (yes)                                       
+|Librarian|                                      
 :Refuse Borrowing Books;                                   
-detach                            
-endif                             
-|Librarian|                   
+detach                                           
+endif                                            
+|Librarian|                                      
 :Scan Barcode and Borrow Books;                    
-endfork
-end
+endfork                                          
+end                                              
 @enduml                                          

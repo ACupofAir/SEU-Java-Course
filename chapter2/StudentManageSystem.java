@@ -87,6 +87,10 @@ public class StudentManageSystem {
         System.out.println();                                     
     }                                                             
                                                                   
+    
+    /** 
+     * @param args[]
+     */
     public static void main(String args[]) {                      
         StudentManageSystem A = new StudentManageSystem();        
         A.showMenu();                                             

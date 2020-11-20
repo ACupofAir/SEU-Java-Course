@@ -13,6 +13,10 @@ public class TestWriter {
     this.fReader = new FileReader(file);                      
   }                                                            
                                                         
+  
+  /** 
+   * @throws IOException
+   */
   public void print_file() throws IOException {              
     int character = this.fReader.read();                
     while(character != -1) {                            
@@ -21,6 +25,11 @@ public class TestWriter {
     }                                                   
   }                                                     
                                                                
+  
+  /** 
+   * @param file
+   * @throws IOException
+   */
   public static void createFile(File file) throws IOException {
     if(!file.exists() || !file.isFile()) {                    
       file.createNewFile();                                   
@@ -28,6 +37,11 @@ public class TestWriter {
   }                                                           
                                                                
                                                                
+  
+  /** 
+   * @param args
+   * @throws IOException
+   */
   public static void main(String[] args) throws IOException {  
     File file = new File("./TestWriter.txt");                 
     TestWriter tester = new TestWriter(file);                 

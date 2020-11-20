@@ -7,6 +7,10 @@ public class GeorgianHouse extends House {
     System.out.println("The extended class: " + className);
   }                                                      
                                                                                
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {                                     
     GeorgianHouse gHouse = new GeorgianHouse();
     House house = gHouse;              

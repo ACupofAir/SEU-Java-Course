@@ -1,8 +1,8 @@
 @startuml ResearchProjectManagementSystem
 |Project Applicants|
 start              
-:Register through System;
-fork                
+:Register through System;    
+fork                         
 |Audit Departments|          
 :Identify the identity;      
 fork again                   
@@ -14,13 +14,16 @@ end fork
 :Review the Project;         
 |Project Applicants|         
 if (is Approved?) then (yes) 
-  fork              
-  :Be Implemented;  
-  fork again        
-  :Mid Assessment;          
-  fork again        
-  :Conclude Project;
-  end fork
-endif
-end     
+  fork                       
+  :Be Implemented;           
+  fork again                 
+  :Mid Assessment;           
+  fork again                 
+  :Conclude Project;         
+  end fork                   
+else (no)                    
+  :Modify the Project;       
+  detach                     
+endif                        
+end                          
 @enduml                      

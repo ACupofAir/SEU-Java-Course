@@ -8,10 +8,18 @@ public class ThreeDPointer extends TwoDPointer {
     z = sc.nextInt();             
   }                               
                                   
+  
+  /** 
+   * @return double
+   */
   public double distance() {      
     return Math.sqrt(x*x+y*y+z*z);
   }                               
                             
+  
+  /** 
+   * @return int
+   */
   public int projection() { 
     return x*y*z;           
   }                         

@@ -1,0 +1,22 @@
+@startuml CreditCard
+note "CreditCard" as N1
+[*] --> UnderReview                  
+                                     
+UnderReview --> BeVerified            
+BeVerified: entry/CheckInfo          
+                                     
+BeVerified --> Activation             
+state Activation {                   
+  [*] -> NoBalance : Repay Intime    
+  NoBalance --> NoBalance : Repay Intime
+  NoBalance --> BalanceOwed : OverDraft
+}                                      
+                                    
+Activation --> Cancellation   
+                              
+Cancellation: entry/SubmitApplication
+Cancellation: exit/FinishRepayment  
+                              
+' Cancellation -left-> Activation[H]
+Cancellation --> [*]          
+@enduml                                

@@ -23,6 +23,10 @@ public class Atm {
     menu_first_reflect(cmd);        
   }                                 
                                     
+  
+  /** 
+   * @param cmd
+   */
   public void menu_first_reflect(int cmd) {
     if (cmd == 1) {                 
       System.out.println("Username:");
@@ -56,6 +60,10 @@ public class Atm {
     menu_second_reflect(this.cmd);     
   }                                     
                                         
+  
+  /** 
+   * @param cmd
+   */
   public void menu_second_reflect(int cmd) {
     if (cmd == 1) {                     
       System.out.println("Put you money(type the number): ");
@@ -79,6 +87,10 @@ public class Atm {
     }                                   
   }                                     
                                         
+  
+  /** 
+   * @param args[]
+   */
   public static void main(String args[]) {
     Atm user = new Atm();               
     user.menu_first();                  

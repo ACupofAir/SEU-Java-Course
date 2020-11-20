@@ -15,6 +15,10 @@ public class Person {
     System.out.println("My name is " + name + " and my age is " + age);
   }                         
                             
+  
+  /** 
+   * @param args[]
+   */
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     Person wj = new Person(sc.next(), 18);

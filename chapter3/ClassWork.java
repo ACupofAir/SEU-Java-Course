@@ -1,6 +1,10 @@
 package chapter3;
                                         
 public class ClassWork {       
+  
+  /** 
+   * @return int
+   */
   public int test() {         
     try {                      
       System.out.println("try block");
@@ -17,6 +21,10 @@ public class ClassWork {
     }                                  
   }                                    
                                        
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {
     ClassWork a = new ClassWork();      
     System.out.println(a.test());

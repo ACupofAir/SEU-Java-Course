@@ -1,0 +1,24 @@
+@startuml ElectricWaterHeater
+[*] -> Operating                 
+                                 
+state Operating {                
+  [*] -right-> Heating                  
+  state Heating {                 
+    [*] --> Filling          
+    Filling --> Boiling         
+    Boiling --> [*]                  
+  }                                 
+                                    
+  Heating -> Keeping                
+  state Keeping {                   
+    [*] --> Detecting               
+    Detecting --> Warming           
+    Warming --> [*]                 
+  }                                 
+}                                   
+                                    
+Operating --> Paused : Power  Off
+Paused -> [*]              
+Paused -left-> Operating[H]
+Operating --> [*] : Power  Off
+@enduml                             

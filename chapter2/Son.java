@@ -7,6 +7,10 @@ public class Son extends Father{
     System.out.println(name);
   }                        
                            
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {
     Father person = new Son();
     person.showName();     
