@@ -1,0 +1,34 @@
+@startuml UsecaseCampusInfoPlatform
+:Students:                                            
+:Teachers:                                            
+:Administrative departments: as Admin                         
+Teachers --|> Admin
+                  
+(log in) as (all)                                                      
+                                                       
+(elect courses) as (s1)                                
+(drop courses) as (s2)                                 
+(query the results of courses) as (s3)                 
+(apply for scholarships) as (s4)                       
+                                                       
+(upload courseware and other teaching materials) as (t1)
+                                                       
+(issue a public notice) as (a1_t2)                     
+                                                       
+Students --> s1     
+Students --> s2     
+Students --> s3     
+Students --> s4     
+s1 ..> all : include 
+s2 ..> all : include 
+s3 ..> all : include 
+s4 ..> all : include 
+                    
+Teachers -up-> t1     
+Teachers -Up-> a1_t2
+                    
+Admin --> a1_t2
+t1 .up.> all : include
+a1_t2 .up.> all : include
+                    
+@enduml                                                

@@ -1,0 +1,24 @@
+@startuml REsearchProject
+[*] -> Identifing            
+state Identifing {           
+  [*] --> IdentfingCredit    
+  IdentfingCredit --> IdentfingResearch
+  IdentfingResearch --> IdentfingOtherAspects
+  IdentfingOtherAspects --> [*]    
+}                                            
+                                   
+Identifing -> Register             
+Register: entry/IdentyFinished     
+                                   
+Register -> Assessment             
+state Assessment {                           
+  [*] --> InitialAssessment                  
+  InitialAssessment --> MidAssment           
+  MidAssment: entry/ReviewbyExperts          
+  MidAssment --> ProjectConcluding           
+  ProjectConcluding --> [*]                  
+}                                            
+                                             
+Assessment -> Applying                       
+Applying -> [*]                              
+@enduml                                      

@@ -15,10 +15,14 @@ state Operating {
     Detecting --> Warming           
     Warming --> [*]                 
   }                                 
+                                    
+  Keeping ->[*] : Cycle Complete    
 }                                   
                                     
-Operating --> Paused : Power  Off
-Paused -> [*]              
-Paused -left-> Operating[H]
-Operating --> [*] : Power  Off
+Operating --> [*] : Power Off       
+Operating --> Paused                
+Paused --> [*] : Power Off                      
+Paused --> Operating[H]              
+Paused: entry/Getting Water         
+                                    
 @enduml                             
