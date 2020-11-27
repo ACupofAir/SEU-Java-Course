@@ -1,0 +1,20 @@
+@startuml Electronic Door
+title Electronic Door Timing Diagram
+robust "Door" as door
+concise "People" as people
+@0               
+door is close    
+people is none   
+                 
+@100             
+door is open     
+people is coming 
+                 
+@200             
+door is closing    
+people is leaving
+              
+@300          
+door is close    
+people is none   
+@enduml                                        

@@ -1,0 +1,12 @@
+@startuml BankingSystem
+title Banking System
+actor customer    
+customer -> account **: create()
+customer -> account : setInfo()
+activate account        
+actor cashier     
+customer -> cashier: saveOrWithdrawMoney()
+activate cashier  
+cashier -> account : changeBalance()
+deactivate account
+@enduml                            

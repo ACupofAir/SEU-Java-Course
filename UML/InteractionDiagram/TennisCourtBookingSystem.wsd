@@ -1,0 +1,20 @@
+@startuml TennisCourtBookingSystem
+title Tennis Court Booking System                            
+actor users                                                  
+participant SystemAdministrator                              
+actor siteManager                                            
+autonumber                                                   
+activate users                                               
+users->SystemAdministrator: bookSite()                       
+activate SystemAdministrator                                 
+SystemAdministrator->siteManager: deliverUserRequirements()  
+activate SystemAdministrator #3498db                         
+activate siteManager                                         
+siteManager -> siteManager: queryUnoccupiedSite()            
+siteManager -> SystemAdministrator: returnUnoccupiedSiteInfo() 
+deactivate SystemAdministrator                               
+deactivate siteManager                                       
+SystemAdministrator->SystemAdministrator: decidedSite()      
+SystemAdministrator -> users: noticeSiteInfo()                        
+deactivate SystemAdministrator                               
+@enduml                                                      

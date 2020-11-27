@@ -15,20 +15,20 @@ Teachers --|> Admin
                                                        
 (issue a public notice) as (a1_t2)                     
                                                        
-Students --> s1     
-Students --> s2     
-Students --> s3     
-Students --> s4     
-s1 ..> all : include 
-s2 ..> all : include 
-s3 ..> all : include 
-s4 ..> all : include 
-                    
-Teachers -up-> t1     
-Teachers -Up-> a1_t2
-                    
-Admin --> a1_t2
-t1 .up.> all : include
-a1_t2 .up.> all : include
-                    
+Students --> s1                   
+Students --> s2                   
+Students --> s3                   
+Students --> s4                   
+s1 ..> all : include              
+s2 ..> all : include              
+s3 ..> all : include                                   
+s4 ..> all : include                                   
+                                                       
+Teachers -up-> t1                                      
+Teachers -Up-> a1_t2                                   
+                                                       
+Admin --> a1_t2                                        
+t1 .up.> all : include                                 
+a1_t2 .up.> all : include                              
+                                                       
 @enduml                                                

@@ -1,39 +1,39 @@
 @startuml ClassCampusInfoPlatform
-                         
-class Students {         
-  -string name           
-  -int id                
-                         
-  +void elect_courses()  
+                            
+class Students {            
+  -string name              
+  -int id                   
+                            
+  +void elect_courses()     
   +void query_courses_results()
   +void apply_scholarship() 
                              
 }                            
                              
 class Admin {                
-  -string name              
-  -int id                        
-                                  
-  +void issue_notice()            
-}                                 
-                                  
-class Teachers extends Admin{     
-  -string name                    
-  -int id                         
-                                  
+  -string name                      
+  -int id                           
+                                    
+  +void issue_notice()              
+}                                   
+                                    
+class Teachers extends Admin{       
+  -string name                      
+  -int id                           
+                                    
   +void issue_notice()              
   +void upload_courseware()         
-  +void upload_teaching_materials()
-                                  
-}                                 
-                                 
-class CampusInfoSystem {         
-  -Admin administors             
-  -Stuedents user                
-}                                
-                                 
-CampusInfoSystem o-- Admin       
-CampusInfoSystem o-- Teachers    
-CampusInfoSystem o-up- Students
-                                  
-@enduml                           
+  +void upload_teaching_materials() 
+                                    
+}                                   
+                                    
+class CampusInfoSystem {            
+  -Admin administors                
+  -Stuedents user                   
+}                                   
+                                    
+CampusInfoSystem "1" o-- "1..*" Admin       
+CampusInfoSystem "1" o-- "1..*" Teachers    
+CampusInfoSystem "1" o-up- "0..*" Students 
+                                    
+@enduml                             

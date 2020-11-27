@@ -13,40 +13,40 @@ public class FileRW {
     this.fOutputStream = new DataOutputStream(new FileOutputStream(file));                 
   }                                                                     
                                                                         
-  
-  /** 
-   * @param file
-   * @throws IOException
-   */
+                             
+  /**                        
+   * @param file             
+   * @throws IOException     
+   */                        
   public static void createFile(File file) throws IOException {         
     if(!file.exists() || !file.isFile()) {                              
       file.createNewFile();                                             
     }                                                                   
   }                                                                     
                                                            
-  
-  /** 
-   * @param str
-   * @throws IOException
-   */
+                             
+  /**                        
+   * @param str              
+   * @throws IOException     
+   */                        
   public void writeStr(String str)throws IOException {       
     fOutputStream.writeBytes(str);                           
   }                                                          
                                                                 
-  
-  /** 
-   * @param str
-   * @throws IOException
-   */
+                             
+  /**                        
+   * @param str              
+   * @throws IOException     
+   */                        
   public void writeUTF(String str) throws IOException {         
     fOutputStream.writeUTF(str);                                
   }                                                             
                                                                         
-  
-  /** 
-   * @param student
-   * @throws IOException
-   */
+                             
+  /**                        
+   * @param student          
+   * @throws IOException     
+   */                        
   public void write(Student student) throws IOException {               
     fOutputStream.writeBytes(Long.toString(student.getId()));   
     fOutputStream.writeBytes("\t");                                       
@@ -56,19 +56,19 @@ public class FileRW {
     fOutputStream.writeBytes("\n");                                       
   }                                                                     
                                                                         
-  
-  /** 
-   * @return String
-   * @throws IOException
-   */
+                             
+  /**                        
+   * @return String          
+   * @throws IOException     
+   */                        
   public String readLine() throws IOException {                         
     return fInputStream.readLine();                                     
   }                                                                     
                                                                         
-  
-  /** 
-   * @throws IOException
-   */
+                             
+  /**                        
+   * @throws IOException     
+   */                        
   public void print_file() throws IOException {                         
     String count;                                                       
     while((count = this.readLine()) != null) {                          
@@ -76,9 +76,9 @@ public class FileRW {
     }                                                                   
   }                                                                     
                                                                 
-  
-  /** 
-   * @throws IOException
+                             
+  /**                        
+   * @throws IOException     
    */                                  
   public void close() throws IOException {                      
     fInputStream.close();                                       
@@ -90,7 +90,7 @@ public class FileRW {
    * @param args                       
    */                                  
   public static void main(String[] args) {                      
-    //中文乱码
+    //中文乱码                   
     // Student A = new Student(71108501, "张三", 80.0);           
     // Student B = new Student(71108502, "李四", 79.5);           
     // Student C = new Student(71108503, "王五", 91.0);           
