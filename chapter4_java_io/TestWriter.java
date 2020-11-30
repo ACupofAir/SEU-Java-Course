@@ -37,11 +37,11 @@ public class TestWriter {
   }                                                           
                                                                
                                                                
-  
-  /** 
+              
+  /**         
    * @param args
    * @throws IOException
-   */
+   */         
   public static void main(String[] args) throws IOException {  
     File file = new File("./TestWriter.txt");                 
     TestWriter tester = new TestWriter(file);                 
