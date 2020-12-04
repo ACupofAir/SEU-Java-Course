@@ -1,0 +1,13 @@
+@startuml courtBookingSys
+component CourtManageSys [
+  CourtManageSys                      
+]                       
+                 
+() queryCourt as qC
+interface bookCourt as bC
+                            
+CourtManageSys -( qC      
+' CourtManageSys -(      
+                            
+                            
+@enduml                     

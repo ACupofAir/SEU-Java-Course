@@ -1,0 +1,30 @@
+@startuml libraryManageSys
+component Borrower                
+interface DateAccess as DA        
+DA - Borrower                     
+                                  
+component LibraryManageSystem [    
+  LibraryManageSystem              
+  <<application>>                  
+]                                  
+                      
+component DateBase [  
+  University DB       
+  <<database>>                    
+]                                 
+                                  
+interface JDBC                    
+JDBC - DateBase                   
+                                   
+component Persistence [            
+  Persistence                      
+  <<infrastructure>>               
+]                                  
+                                   
+interface Persistence as Per      
+Per -left- Persistence                 
+                                   
+Persistence ..> JDBC   
+LibraryManageSystem ..> DA         
+Borrower ..> Per                  
+@enduml                            
