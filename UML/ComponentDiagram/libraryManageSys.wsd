@@ -14,17 +14,17 @@ component DateBase [
 ]                                 
                                   
 interface JDBC                    
-JDBC - DateBase                   
+JDBC - DateBase                    
                                    
 component Persistence [            
   Persistence                      
   <<infrastructure>>               
 ]                                  
                                    
-interface Persistence as Per      
+interface Persistence as Per       
 Per -left- Persistence                 
                                    
-Persistence ..> JDBC   
+Persistence ..> JDBC : <<requires>> 
 LibraryManageSystem ..> DA         
-Borrower ..> Per                  
+Borrower ..> Per                   
 @enduml                            

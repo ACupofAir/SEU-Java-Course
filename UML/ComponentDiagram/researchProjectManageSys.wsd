@@ -1,0 +1,25 @@
+@startuml researchProjectManageSys
+node UserClient {
+  component Bowser [
+    Bowser        
+  ]                
+}                  
+                   
+node ProjectServe {
+  [Register]           
+  [Assess]         
+}                  
+                    
+database MySql {                
+  folder "Passed" {             
+    [Passed Project]            
+  }                             
+                                
+  folder "Failed" {             
+    [Failed Project]            
+  }                             
+}                               
+                                
+ProjectServe ..> MySql : <<Required>>
+UserClient -- ProjectServe
+@enduml                         

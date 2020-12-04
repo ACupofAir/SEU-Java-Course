@@ -1,13 +1,26 @@
 @startuml courtBookingSys
 component CourtManageSys [
   CourtManageSys                      
-]                       
-                 
-() queryCourt as qC
-interface bookCourt as bC
-                            
-CourtManageSys -( qC      
-' CourtManageSys -(      
-                            
-                            
-@enduml                     
+]                                
+                                 
+component Customer [             
+  Customer                       
+]                                
+                                 
+() queryCourt as qC              
+interface bookCourt as bC        
+                                 
+CourtManageSys --( qC                    
+qC -- Customer                            
+CourtManageSys --( bC                     
+bC -- Customer                            
+                                          
+component DataBase [                      
+  DataBAse                                
+]                                         
+                                          
+interface JDBC                            
+DataBase -left-JDBC                       
+CourtManageSys ..> JDBC : store customer's info
+                                          
+@enduml                                   
