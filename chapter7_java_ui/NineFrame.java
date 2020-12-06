@@ -4,8 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class NineFrame {
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {
-
     JFrame frame = new JFrame("GirldLayoutDemo");
     frame.getContentPane().setLayout(new GridLayout(3, 3));
     JButton b1 = new JButton("1");
@@ -30,4 +33,5 @@ public class NineFrame {
     frame.setSize(200, 200);
     frame.setVisible(true);
   }
-}
+} 
+  

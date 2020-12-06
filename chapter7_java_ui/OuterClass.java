@@ -18,6 +18,10 @@ public class OuterClass {
   }                                                      
                                                          
                                                          
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {               
     OuterClass a = new OuterClass();      
     a.show();                             

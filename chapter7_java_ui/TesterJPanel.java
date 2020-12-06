@@ -5,6 +5,10 @@ import java.awt.*;
                                                        
 public class TesterJPanel {                            
                                                        
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {             
     JFrame jFrame = new JFrame("JPanel example");       
     jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

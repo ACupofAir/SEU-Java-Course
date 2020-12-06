@@ -4,6 +4,10 @@ import java.awt.BorderLayout;
 import javax.swing.*;                                    
                                                          
 public class Tester {                                    
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {               
     JFrame frame = new JFrame();                         
     JButton button = new JButton("Click me");            

@@ -6,6 +6,10 @@ import java.awt.*;
                                                                                              
 public class TesterJSplitPanel {                                                             
                                                                                              
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {                                                   
     JFrame jFrame = new JFrame("JSpiltPanel example");                                       
     jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                                   

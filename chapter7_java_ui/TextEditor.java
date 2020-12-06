@@ -106,6 +106,10 @@ public class TextEditor {
                                                                            
   }                                                                        
                                                                            
+                                    
+  /**                               
+   * @param args                    
+   */                               
   public static void main(String[] args) {                                 
     new TextEditor();                                                      
   }                                                                        

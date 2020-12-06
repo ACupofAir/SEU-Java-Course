@@ -13,6 +13,10 @@ public class TextSelectionFrame extends JFrame {
     this.setSize(600,200);                               
   }                                                      
                                                          
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {               
     TextSelectionFrame tFrame = new TextSelectionFrame();
     tFrame.setVisible(true);                             

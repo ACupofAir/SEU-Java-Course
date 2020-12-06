@@ -15,6 +15,10 @@ public class ATM {
 		currentUser = null;                      
 	}                                         
                                            
+	
+	/** 
+	 * @return Bank
+	 */
 	public Bank getBank() {                   
 		return bank;                             
 	}                                         
@@ -50,6 +54,10 @@ public class ATM {
 		System.out.println("Please input the amount to withdrawal:");
 	}                                         
                                            
+	
+	/** 
+	 * @throws IOException
+	 */
 	public void showMenu() throws IOException {
 		int selection = 0;                       
 		int amount = 0;                          
@@ -109,27 +117,31 @@ public class ATM {
 							case 3:                             
 								System.out.println("The balance of " + currentUser.getName()
 										+ " is " + currentUser.getBalance());
-								continue;        
-							case 4:           
-								System.out.println("Bye!");
-							}                 
-							break;            
-						}                           
-						break;                      
-					}                            
-				}                             
-			}                              
-		}                               
-	}                                
-                                  
-	public static void main(String[] args) {
-		try{                            
-			ATM atm = new ATM("CoSE Bank");
-			atm.showMenu();                
-			atm.sc.close();                
-		}catch(Exception e) {           
-			e.printStackTrace();           
-		}                               
-	}                                
-}                                 
-                                  
+								continue;                          
+							case 4:                             
+								System.out.println("Bye!");        
+							}                                   
+							break;                              
+						}                                    
+						break;                               
+					}                                     
+				}                                      
+			}                                       
+		}                                        
+	}                                         
+                                           
+	  
+	/** 
+	 * @param args
+	 */
+	public static void main(String[] args) {  
+		try{                                     
+			ATM atm = new ATM("CoSE Bank");         
+			atm.showMenu();                         
+			atm.sc.close();                         
+		}catch(Exception e) {                    
+			e.printStackTrace();                    
+		}                                        
+	}                                         
+}                                          
+                                           

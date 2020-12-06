@@ -1,0 +1,14 @@
+@startuml ActivityDaigram
+title Tennis Court Booking System Activity Daigram
+|#884573|User|                            
+start                                     
+repeat                                    
+  :selectCourt;                           
+repeat while (courtIsAvailable?) is (no)  
+  |TennisCourt|                           
+  :confirmBookingRequest;               
+'   |User|                                
+'   :selectCourt;                         
+' |User|                                  
+' :payReservationOnline;                  
+@enduml                                           

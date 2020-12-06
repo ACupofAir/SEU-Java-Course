@@ -6,7 +6,7 @@ import java.util.*;
 public class Bank {                                  
                                                      
 	private HashMap<String, User> users;                
-	private String bankName;                            
+	private String bankName;                                 
 	private File file = new File("./bank.dat");              
 	private ObjectInputStream ois;                           
 	private ObjectOutputStream oos;                          
@@ -25,14 +25,26 @@ public class Bank {
 	}                                                        
                                                           
                                                           
+	
+	/** 
+	 * @return String
+	 */
 	public String getBankName() {                            
 		return bankName;                                        
 	}                                                        
                                                           
+	
+	/** 
+	 * @param bankName
+	 */
 	public void setBankName(String bankName) {               
 		this.bankName = bankName;                               
 	}                                                        
                                                           
+	
+	/** 
+	 * @return HashMap<String, User>
+	 */
 	public HashMap<String, User> getUsers() {                
 		return users;                                           
 	}                                                        
@@ -105,6 +117,10 @@ public class Bank {
 		return user.getBalance();                               
 	}                                                        
 	                                                         
+	
+	/** 
+	 * @throws IOException
+	 */
 	public void save() throws IOException {                  
 		this.oos.writeObject(this.users);                       
 	}                                                        

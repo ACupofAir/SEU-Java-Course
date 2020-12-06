@@ -14,6 +14,10 @@ public class Atm {
     this.bank = new Bank(new File("./atmData.txt"));         
   }                                                          
                                                              
+  
+  /** 
+   * @throws IOException
+   */
   public void menu_first() throws IOException{                                 
     System.out.println("Hello, Please log in or register");  
     System.out.println("1.log in");                          
@@ -23,6 +27,11 @@ public class Atm {
     menu_first_reflect(cmd);                                                            
   }                                                                                     
                                                                                         
+  
+  /** 
+   * @param cmd
+   * @throws IOException
+   */
   public void menu_first_reflect(int cmd) throws IOException {                                             
     if (cmd == 1) {                                                                     
       System.out.println("Username:");                                                  

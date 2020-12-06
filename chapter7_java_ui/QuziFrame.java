@@ -10,6 +10,10 @@ public class QuziFrame extends JFrame {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setSize(600,200);                   
   }                                                   
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {   
     QuziFrame frame = new QuziFrame();       
     frame.setVisible(true);                  

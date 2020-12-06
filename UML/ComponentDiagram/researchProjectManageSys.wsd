@@ -1,5 +1,5 @@
 @startuml researchProjectManageSys
-node UserClient {
+node UserClient { 
   component Bowser [
     Bowser        
   ]                

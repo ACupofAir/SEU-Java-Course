@@ -14,26 +14,50 @@ public class User implements Serializable{
 		this.balance = 0;                         
 	}                                          
                                             
+	
+	/** 
+	 * @return String
+	 */
 	public String getName() {                  
 		return name;                              
 	}                                          
                                             
+	
+	/** 
+	 * @param name
+	 */
 	public void setName(String name) {         
 		this.name = name;                         
 	}                                          
                                             
+	
+	/** 
+	 * @return String
+	 */
 	public String getPassword() {              
 		return password;                          
 	}                                          
                                             
+	
+	/** 
+	 * @param password
+	 */
 	public void setPassword(String password) { 
 		this.password = password;                 
 	}                                          
                                             
+	
+	/** 
+	 * @return int
+	 */
 	public int getBalance() {                  
 		return balance;                           
 	}                                          
                                             
+	
+	/** 
+	 * @param balance
+	 */
 	public void setBalance(int balance) {      
 		this.balance = balance;                   
 	}                                          

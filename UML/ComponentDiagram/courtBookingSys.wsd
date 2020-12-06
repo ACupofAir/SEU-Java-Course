@@ -3,14 +3,14 @@ component CourtManageSys [
   CourtManageSys                      
 ]                                
                                  
-component Customer [             
-  Customer                       
-]                                
-                                 
-() queryCourt as qC              
-interface bookCourt as bC        
-                                 
-CourtManageSys --( qC                    
+component Customer [                      
+  Customer                                
+]                                         
+                                          
+() queryCourt as qC                       
+interface bookCourt as bC                 
+                                          
+CourtManageSys --( qC                     
 qC -- Customer                            
 CourtManageSys --( bC                     
 bC -- Customer                            

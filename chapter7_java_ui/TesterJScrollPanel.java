@@ -5,6 +5,10 @@ import java.awt.*;
                                                                                                                                                         
 public class TesterJScrollPanel {                                                                                                                       
                                                                                                                                                         
+  
+  /** 
+   * @param args
+   */
   public static void main(String[] args) {                                                                                                              
     JFrame jFrame = new JFrame("JScrollPanel");                                                                                                         
     jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                                                                                              

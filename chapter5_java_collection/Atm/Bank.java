@@ -17,12 +17,21 @@ public class Bank {
                                                                                                      
   }                                                                                                  
                                                                                                      
+  
+  /** 
+   * @param file
+   * @throws IOException
+   */
   public static void createFile(File file) throws IOException {                                      
     if(!file.exists() || file.isDirectory()) {                                                      
       file.createNewFile();                                                                         
     }                                                                                               
   }                                                                                                  
                                                                                                      
+  
+  /** 
+   * @throws IOException
+   */
   public void BankClose() throws IOException {                                                          
     Iterator<String> it = mapUsers.keySet().iterator();                                                 
     while(it.hasNext()) {                                                                               
