@@ -1,0 +1,24 @@
+@startuml Machine Diagram
+title Elevator System                          
+                                               
+state  WaitingforFloorNum {                    
+  WaitingforFloorNum: entry/doorOpen           
+}                                              
+                                               
+[*] -> WaitingforFloorNum : PeopleComing       
+                                               
+WaitingforFloorNum -up-> Up : FloorNum>CurFloor      
+Up: entry/closeDoor                                  
+Up: do/EngineRun                                      
+Up: exit/EngineStop                                   
+Up -down-> WaitingforFloorNum : arrived               
+                                                      
+WaitingforFloorNum -down-> Down : FloorNum<CurFloor   
+Down --> WaitingforFloorNum : arrived                 
+Down: entry/closeDoor                                 
+Down: do/EngineRun                                    
+Down: exit/EngineStop                                 
+                                                      
+WaitingforFloorNum -> WaitingforFloorNum : goToFloor(n)
+WaitingforFloorNum --> [*] : Poweroff                 
+@enduml                                               

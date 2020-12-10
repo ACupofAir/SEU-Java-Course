@@ -1,0 +1,29 @@
+@startuml Activities in Campus Information Teacher Version
+                                 
+title Activities in Campus Information Teacher Version
+|#YellowGreen|AcademicSecretary|
+|Teacher|                        
+start                            
+:login;                                                      
+|#AntiqueWhite|System|                                       
+if (verifiedUseInfo?) then (yes)                             
+  |Teacher|                                                  
+  fork                                                       
+    :submitStudentUsualPerformance;                            
+  fork again                                                 
+    :submitFinalExamScores;                                    
+  fork again                                                 
+    :submitPracticalExercises;                                 
+  end fork                                                   
+  :submitTotalScores;                                
+  :submitCoseSum;                                    
+  |AcademicSecretary|                                
+  :ReviewScores;                                     
+  |#AntiqueWhite|System|                             
+  :releaseSocres;                                    
+  end                                                
+else (no)                                            
+  :loginFailed;                                      
+  end                                                
+endif                                                
+@enduml                                                      

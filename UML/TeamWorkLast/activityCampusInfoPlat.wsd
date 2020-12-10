@@ -1,0 +1,24 @@
+@startuml Activities in Campus Information Platform
+                                                             
+title Activities in Campus Information Platform              
+|Students|                                                   
+start                                                        
+:login;                                                      
+|#AntiqueWhite|System|                                       
+:verifyUserInfo();                                           
+if (verifiedSuccess?) then (yes)                             
+ :displayServicesAvailabe();                                  
+ |Students|                                                  
+ :downloadRequiredCose;                                      
+ :exit;                                                      
+ end                                                         
+else                                                         
+ |System|                                                    
+ if (failuresLessThreeNums?) then (yes)                      
+ :returnToLogin;                                             
+ else(no)                                                    
+ :loginFails;                                                
+endif                                                       
+ end                                                         
+                                                             
+@enduml                                                      

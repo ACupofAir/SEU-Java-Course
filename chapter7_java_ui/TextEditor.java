@@ -1,5 +1,5 @@
 package chapter7_java_ui;
-                   
+                        
 import java.awt.*;                 
 import java.awt.event.*;                          
 import java.io.*;                  
@@ -106,10 +106,10 @@ public class TextEditor {
                                                                            
   }                                                                        
                                                                            
-                                    
-  /**                               
-   * @param args                    
-   */                               
+                                             
+  /**                                        
+   * @param args                             
+   */                                        
   public static void main(String[] args) {                                 
     new TextEditor();                                                      
   }                                                                        
