@@ -1,7 +1,7 @@
 package chapter7_java_ui.Caculator;
                                                                
 import javax.swing.*;                                          
-import java.awt.event.*;
+import java.awt.event.*;                        
                                                                 
 public class CalculatorFrame extends JFrame {                   
   private JMenuBar mb;                                
@@ -29,6 +29,10 @@ public class CalculatorFrame extends JFrame {
     pack();                                                           
   }                                                                   
                                                                       
+                                                
+  /**                                           
+   * @param args                                
+   */                                           
   public static void main(String[] args) {                            
     CalculatorFrame frame = new CalculatorFrame();                    
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             

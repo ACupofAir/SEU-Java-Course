@@ -15,8 +15,8 @@ class CalculatorPanel extends JPanel {
   private String lastCommand;               
   private String Command;               
   private boolean start;                    
-  double preData;               
-  double curData;               
+  double preData;                      
+  double curData;                      
                                             
   public CalculatorPanel() {                
     setLayout(new BorderLayout());          
@@ -57,7 +57,7 @@ class CalculatorPanel extends JPanel {
     addButton("^2", command);                         
     addButton("√", command);                         
     addButton("Clr", command);                        
-                                      
+                                       
     add(panel, BorderLayout.CENTER);                
   }                                                 
                                                     
@@ -68,7 +68,7 @@ class CalculatorPanel extends JPanel {
   }                                                       
                                                           
   private class InsertAction implements ActionListener {  
-    public void actionPerformed(ActionEvent event) {      
+    public void actionPerformed(ActionEvent event) {                             
       String input = event.getActionCommand();                                   
       if (start) {                                                               
         display.setText("");                                                     
@@ -78,37 +78,34 @@ class CalculatorPanel extends JPanel {
     }                                                                            
   }                                                                              
                                                                                  
-  private class CommandAction implements ActionListener {                        
+  private class CommandAction implements ActionListener {
     public void actionPerformed(ActionEvent event) {
       Command = event.getActionCommand();
-      if (Command.equals("Clr")) {
-        display.setText("");
-        start = false;   
-      } else {              
-                                            
-        if (start) {                        
-          if (Command.equals("-")) {        
-            display.setText(Command);       
-            start = false;                  
-          } else                            
-            lastCommand = Command;          
-        } else {                            
-          double data = Double.parseDouble(display.getText());
-          if (Command.equals("^2")) {       
-            result = data * data;           
-            display.setText("" + result);   
-          } else if (Command.equals("√")) { 
-            result = Math.sqrt(data);           
-            display.setText("" + result);   
-          } else {                          
-            calculate(data);                
-            lastCommand = Command;          
-            start = true;                   
-          }                                 
-        }                                   
-      }                                     
-    }                                       
-  }                                         
+      double data = Double.parseDouble(display.getText());
+      if (Command.equals("Clr")) {      
+        display.setText("");            
+        start = false;                  
+      } else if (Command.equals("√")) { 
+        result = Math.sqrt(data);       
+        display.setText("" + result);   
+      } else if (Command.equals("^2")) {
+        result = data * data;           
+        display.setText("" + result);   
+      } else {                          
+        if (start) {                    
+          if (Command.equals("-")) {    
+            display.setText(Command);   
+            start = false;              
+          } else                        
+            lastCommand = Command;      
+        } else {                        
+          calculate(data);              
+          lastCommand = Command;        
+          start = true;                 
+        }                               
+      }                                 
+    }                                   
+  }                                     
                                                                                  
   public void calculate(double x) {                                              
     if (lastCommand.equals("+"))                                                 
