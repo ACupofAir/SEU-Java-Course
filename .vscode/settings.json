@@ -1,3 +1,4 @@
 {
-  "java.codeGeneration.generateComments": true
+  "java.codeGeneration.generateComments": true,
+  "crosshair.enabled": false
 }

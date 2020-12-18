@@ -6,23 +6,15 @@
   "configurations": [
     {
       "type": "java",
-      "name": "CodeLens (Launch) - OuterClass",
+      "name": "client",
       "request": "launch",
-      "mainClass": "chapter7_java_ui.OuterClass",
-      "projectName": "java_3fd39f81"
+      "mainClass": "${file}"
     },
     {
       "type": "java",
       "name": "Debug (Launch) - Current File",
       "request": "launch",
       "mainClass": "${file}"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - tester",
-      "request": "launch",
-      "mainClass": "chapter5_java_collection.tester",
-      "projectName": "java_3fd39f81"
     },
     {
       "name": "(gdb) 启动",
@@ -44,5 +36,5 @@
         }
       ]
     }
-  ]   
-}     
+  ]
+}
