@@ -17,7 +17,6 @@ public class DataBase {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -27,7 +26,6 @@ public class DataBase {
 		try {
 			connection = DriverManager.getConnection(connectionurl);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -48,13 +46,11 @@ public class DataBase {
 			pst.executeBatch();
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		ResultSet rs = null;
 		try {
-			// statement.executeUpdate(insertString);
 			rs = statement.executeQuery(selectString);
 			ResultSetMetaData rsmd = rs.getMetaData();
 			for (int i = 1; i <= rsmd.getColumnCount(); i++) {
@@ -69,7 +65,6 @@ public class DataBase {
 
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
