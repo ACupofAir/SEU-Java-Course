@@ -1,4 +1,8 @@
 {
   "java.codeGeneration.generateComments": true,
-  "crosshair.enabled": false
+  "crosshair.enabled": false,
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\offnet\\Desktop\\mysql-connector-java-5.1.49\\mysql-connector-java-5.1.49-bin.jar"
+  ]
 }
