@@ -12,7 +12,9 @@ import java.sql.Statement;
 public class DataBase {
 
 
-
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

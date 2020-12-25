@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ChatClient",
+      "request": "launch",
+      "mainClass": "chapter11_Java_Network.Homework.ChatClient",
+      "projectName": "java_3fd39f81"
+    },
+    {
+      "type": "java",
+      "name": "Launch ChatServer",
+      "request": "launch",
+      "mainClass": "chapter11_Java_Network.Homework.ChatServer",
+      "projectName": "java_3fd39f81"
+    },
+    {
+      "type": "java",
       "name": "client",
       "request": "launch",
       "mainClass": "${file}"
