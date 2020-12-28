@@ -28,7 +28,7 @@ public class ChatUI {
 			e.printStackTrace();
 		}
 
-		Font font = new Font("ËÎÌå", Font.PLAIN, 20);
+		Font font = new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20);
 
 		frame = new JFrame();
 		button = new JButton("send");
@@ -57,11 +57,15 @@ public class ChatUI {
 
 		frame.add(scorallPane, BorderLayout.CENTER);
 		frame.add(panel, BorderLayout.SOUTH);
-		frame.setSize(800, 600);
+		frame.setSize(800,600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
 
+
+	/**
+	 * @param mes
+	 */
 	public void updateText(String mes) {
 		textArea.append(mes + "\n");
 
