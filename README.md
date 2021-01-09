@@ -116,13 +116,13 @@
 | `   live    ` |                              dump only live objects                              |
 | `    all    ` | dump all objects in the heap (default if one of "live" or "all" is not specified |
 | ` format=b  ` |                                  binary format                                   |
-| `file=<file>` |                               dump heap to <file>                                |
+| `file=<file>` |                               dump heap to `<file>`                                |
 
 |   histo:op3   |                                        功能                                        |
 |:-------------:|:----------------------------------------------------------------------------------:|
 |    `live`     |                              count only live objects                               |
 |     `all`     | count all objects in the heap (default if one of "live" or "all" is not specified) |
-| `file=<file>` |                                dump data to <file>                                 |
+| `file=<file>` |                                dump data to`<file>`                                 |
 
 4. 例子
 ![](res/2021-01-09-20-24-40.png)
