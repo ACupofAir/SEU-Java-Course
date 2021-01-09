@@ -81,7 +81,7 @@
 |          op           |                     功能                     |
 |:---------------------:|:--------------------------------------------:|
 |    `flag <name> `     |   to print the value of the named VM flag    |
-|  `flag [+|-]<name>`   |    to enable or disable the named VM flag    |
+|  `flag [+\|-]<name>`   |    to enable or disable the named VM flag    |
 | `flag <name>=<value>` | to set the named VM flag to the given value  |
 | `flags              ` |              to print VM flags               |
 | `sysprops           ` |       to print Java system properties        |
