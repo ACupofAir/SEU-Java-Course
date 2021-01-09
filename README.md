@@ -4,6 +4,8 @@
   - [jstat(虚拟机统计信息监视工具)](#jstat虚拟机统计信息监视工具)
   - [jinfo(java配置信息工具)](#jinfojava配置信息工具)
   - [jmap(java内存映像工具)](#jmapjava内存映像工具)
+  - [jhat(用于分析dump)](#jhat用于分析dump)
+  - [jstack(Java堆栈跟踪工具)](#jstackjava堆栈跟踪工具)
 
 # Java Profiling in Terminal
 > java命令行性能检测
@@ -122,7 +124,26 @@
 |     `all`     | count all objects in the heap (default if one of "live" or "all" is not specified) |
 | `file=<file>` |                                dump data to <file>                                 |
 
-3. 例子
+4. 例子
 ![](res/2021-01-09-20-24-40.png)
 ![](res/2021-01-09-20-24-57.png)
 ![](res/2021-01-09-20-25-23.png)
+
+### jhat(用于分析dump)
+
+这个东西已经亡了，不在集成
+
+### jstack(Java堆栈跟踪工具)
+
+1. 命令格式：`jstack -op vmid`
+
+2. 功能
+
+| op |                  功能                   |
+|:--:|:-------------------------------------:|
+| l  |    long listing:显示关于锁的附加信息    |
+| e  | extended listing:显示关于线程的附加信息 |
+
+3. 例子
+  ![](res/2021-01-09-20-57-38.png)
+  ![](res/2021-01-09-20-59-30.png)
