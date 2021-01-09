@@ -1,10 +1,10 @@
 package chapter3;
-                     
+
 import java.io.IOException;
 import java.sql.SQLException;
-                     
+
 public class Test {  
-  
+
   /** 
    * @throws IOException
    * @throws SQLException
@@ -13,4 +13,3 @@ public class Test {
     System.out.println("Ha");
   }                       
 }                                                      
-                                                       

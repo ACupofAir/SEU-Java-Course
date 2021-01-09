@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch RollwayTickleingSystem",
+      "request": "launch",
+      "mainClass": "chapter8_java_muti_thread.HomeWork.RollwayTickleingSystem",
+      "projectName": "java_3fd39f81"
+    },
+    {
+      "type": "java",
       "name": "Launch ChatClient",
       "request": "launch",
       "mainClass": "chapter11_Java_Network.Homework.ChatClient",
