@@ -6,6 +6,8 @@
   - [jmap(java内存映像工具)](#jmapjava内存映像工具)
   - [jhat(用于分析dump)](#jhat用于分析dump)
   - [jstack(Java堆栈跟踪工具)](#jstackjava堆栈跟踪工具)
+  - [VisualVM](#visualvm)
+  - [JConsole(java监视与管理控制台)](#jconsolejava监视与管理控制台)
 
 # Java Profiling in Terminal
 > java命令行性能检测
@@ -24,9 +26,8 @@
 
 2. GUI工具
 
-* JConsole(JAVA监视与管理控制台)
-
 * VisualVM(多合一故障处理工具)
+* JConsole(JAVA监视与管理控制台)
 
 ## 详细介绍
 ### jps(虚拟机进程状况工具)
@@ -147,3 +148,12 @@
 3. 例子
   ![](res/2021-01-09-20-57-38.png)
   ![](res/2021-01-09-20-59-30.png)
+
+### VisualVM
+1. 监视一个本地进程:脑子没问题的看着界面就懂了
+2. 读取dump文件：同上
+
+### JConsole(java监视与管理控制台)
+1. 概述： 内存，线程，类，Cpu情况汇总
+2. 内存页： 相当于jstat
+3. 线程页： 相当于jstack
