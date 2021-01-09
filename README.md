@@ -3,6 +3,7 @@
   - [jps(虚拟机进程状况工具)](#jps虚拟机进程状况工具)
   - [jstat(虚拟机统计信息监视工具)](#jstat虚拟机统计信息监视工具)
   - [jinfo(java配置信息工具)](#jinfojava配置信息工具)
+  - [jmap(java内存映像工具)](#jmapjava内存映像工具)
 
 # Java Profiling in Terminal
 > java命令行性能检测
@@ -81,7 +82,7 @@
 |          op           |                     功能                     |
 |:---------------------:|:--------------------------------------------:|
 |    `flag <name> `     |   to print the value of the named VM flag    |
-|  `flag [+|-]<name>`   |    to enable or disable the named VM flag    |
+|  `flag [+\|-]<name>`   |    to enable or disable the named VM flag    |
 | `flag <name>=<value>` | to set the named VM flag to the given value  |
 | `flags              ` |              to print VM flags               |
 | `sysprops           ` |       to print Java system properties        |
@@ -90,3 +91,38 @@
 3. 例子
 
 ![](res/2021-01-09-19-53-59.png)
+
+### jmap(java内存映像工具)
+1. 简介
+   > * jmap用于生成堆内存快照，即heapdump或dump文件
+   > * 除此之外还可以用来查询类加载器finalizer队列信息
+
+2. 命令格式
+   * `jamp -op1 vmid`
+   * `jmap -dump:-op2 vmid`
+   * `jmap -histo:-op3 vmid`
+3. 功能
+
+|       op1        |                         功能                          |
+|:----------------:|:---------------------------------------------------:|
+| `    clstats  `  |                   显示类加载器信息                    |
+| ` finalizerinfo` | 显示在F-Queue等待Finalizer线程执行finalizer方法的对象 |
+
+
+|   dump:op2    |                                       功能                                       |
+|:-------------:|:--------------------------------------------------------------------------------:|
+| `   live    ` |                              dump only live objects                              |
+| `    all    ` | dump all objects in the heap (default if one of "live" or "all" is not specified |
+| ` format=b  ` |                                  binary format                                   |
+| `file=<file>` |                               dump heap to <file>                                |
+
+|   histo:op3   |                                        功能                                        |
+|:-------------:|:----------------------------------------------------------------------------------:|
+|    `live`     |                              count only live objects                               |
+|     `all`     | count all objects in the heap (default if one of "live" or "all" is not specified) |
+| `file=<file>` |                                dump data to <file>                                 |
+
+3. 例子
+![](res/2021-01-09-20-24-40.png)
+![](res/2021-01-09-20-24-57.png)
+![](res/2021-01-09-20-25-23.png)
