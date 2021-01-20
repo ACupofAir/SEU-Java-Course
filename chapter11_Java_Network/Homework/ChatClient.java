@@ -40,8 +40,7 @@ public class ChatClient {
 			}
 		});
 
-		ClientUI.button.addActionListener(new ActionListener() {
-
+	ClientUI.button.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				String mes = ClientUI.textField.getText();

@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch temp",
+      "request": "launch",
+      "mainClass": "chapter4_java_io.temp",
+      "projectName": "java_3fd39f81"
+    },
+    {
+      "type": "java",
+      "name": "Launch temp",
+      "request": "launch",
+      "mainClass": "temp",
+      "projectName": "java_3fd39f81"
+    },
+    {
+      "type": "java",
+      "name": "Launch Son",
+      "request": "launch",
+      "mainClass": "chapter1.Son",
+      "projectName": "java_3fd39f81"
+    },
+    {
+      "type": "java",
       "name": "Launch RollwayTickleingSystem",
       "request": "launch",
       "mainClass": "chapter8_java_muti_thread.HomeWork.RollwayTickleingSystem",
